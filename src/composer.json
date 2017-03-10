@@ -1,0 +1,16 @@
+{
+    "name": "sample/first/test/tester",
+    "description": "Test Sample.",
+    "keywords": ["test", "sample"],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-0": {"sample\\first\\test": "sample/first/test"}
+    }
+}
