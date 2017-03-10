@@ -16,4 +16,23 @@ class StackTest extends TestCase
         $this->assertEquals('foo', array_pop($stack));
         $this->assertEquals(0, count($stack));
     }
+
+    public function testStatic () {
+        $this->assertNotEquals(CoMultiton::getInstance(), Multiton::getInstance());
+    }
+}
+
+class Multiton {
+    protected static $instance = [];
+
+    private final function __construct()
+    {}
+
+    public static function getInstance()
+    {
+        return static::$instance[static::class] ?? static::$instance[static::class] = new static();
+    }
+}
+
+class CoMultiton extends Multiton {
 }
