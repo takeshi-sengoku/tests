@@ -1,0 +1,52 @@
+checks:
+    php:
+        fix_php_opening_tag: false
+        remove_php_closing_tag: false
+        one_class_per_file: true
+        side_effects_or_types: true
+        no_mixed_inline_html: false
+        require_braces_around_control_structures: false
+        php5_style_constructor: true
+        no_global_keyword: true
+        avoid_usage_of_logical_operators: false
+        psr2_class_declaration: true
+        no_underscore_prefix_in_properties: true
+        no_underscore_prefix_in_methods: true
+        blank_line_after_namespace_declaration: false
+        single_namespace_per_use: true
+        psr2_switch_declaration: true
+        psr2_control_structure_declaration: false
+        avoid_superglobals: false
+        security_vulnerabilities: true
+        no_exit: true
+        uppercase_constants: true
+        use_self_instead_of_fqcn: true
+        simplify_boolean_return: true
+        return_doc_comments: true
+        return_doc_comment_if_not_inferrable: true
+        remove_extra_empty_lines: true
+        properties_in_camelcaps: true
+        prefer_while_loop_over_for_loop: true
+        phpunit_assertions: true
+        parameters_in_camelcaps: true
+        parameter_doc_comments: true
+        param_doc_comment_if_not_inferrable: true
+        overriding_parameter: true
+        optional_parameters_at_the_end: true
+        no_new_line_at_end_of_file: true
+        newline_at_end_of_file: true
+        fix_use_statements:
+            remove_unused: true
+            preserve_multiple: false
+            preserve_blanklines: true
+            order_alphabetically: true
+        check_method_contracts:
+            verify_interface_like_constraints: true
+            verify_documented_constraints: true
+            verify_parent_constraints: true
+filter:
+    excluded_paths:
+        - tests/*
+coding_style:
+    php: {  }
+build: true

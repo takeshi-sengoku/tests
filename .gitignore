@@ -1,3 +1,6 @@
 logs
 *.log
 .project
+.buildpath
+src/vendor/*
+!src/vendor/sample
