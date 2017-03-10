@@ -15,13 +15,14 @@ class Multiton {
 
     public static function getInstance()
     {
-        if (!isset(static::$instance[static::class])) {
+        $class_path = get_called_class();
+        if (!isset(static::$instance[$class_path])) {
             if (is_null(static::$instance)) {
                 static::$instance = array();
             }
-            static::$instance[static::class] = new static();
+            static::$instance[$class_path] = new static();
         }
-        return static::$instance[static::class];
+        return static::$instance[$class_path];
     }
 }
 
