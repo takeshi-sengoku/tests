@@ -1,9 +1,5 @@
 <?php
 
-if (version_compare(PHP_VERSION, '5.6.0') >= 0) {
-    class_alias(PHPUnit\Framework\TestCase::class, 'PHPUnit_Framework_TestCase');
-}
-
 class StackTest extends PHPUnit_Framework_TestCase
 {
     public function testStatic () {
