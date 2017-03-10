@@ -1,8 +1,12 @@
 language: php
 
+before_script: composer dump-autoload -o
+
 php:
   - 7.0
   - 7.1
+  - hhvm
+  - nightly
 
 matrix:
   fast_finish: true
