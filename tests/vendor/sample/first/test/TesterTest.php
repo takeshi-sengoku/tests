@@ -1,8 +1,9 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+//use PHPUnit\Framework\TestCase;
 
-class StackTest extends TestCase
+//class StackTest extends TestCase
+class StackTest extends PHPUnit_Framework_TestCase
 {
     public function testStatic () {
         $this->assertNotEquals(CoMultiton::getInstance(), Multiton::getInstance());
