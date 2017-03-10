@@ -8,7 +8,7 @@ class StackTest extends PHPUnit_Framework_TestCase
 }
 
 class Multiton {
-    static $instance = null;
+    static $instance = array();
 
     private final function __construct()
     {}

@@ -3,9 +3,6 @@ language: php
 before_script: composer dump-autoload -o -d ./src
 
 php:
-  - php
-  - 5.1
-  - 5.2
   - 5.3
   - 5.4
   - 5.5
@@ -16,9 +13,6 @@ php:
   - hhvm
   - hhvm-3.3
   - hhvm-3.6
-  - hhvm-3.9
-  - hhvm-3.12
-  - hhvm-nightly
 
 matrix:
   fast_finish: true
