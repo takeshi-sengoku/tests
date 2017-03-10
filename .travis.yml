@@ -1,6 +1,6 @@
 language: php
 
-before_script: composer dump-autoload -o
+before_script: composer dump-autoload -o -d ./src
 
 php:
   - 7.0
