@@ -1,8 +1,9 @@
 <?php
 
-//use PHPUnit\Framework\TestCase;
+if (version_compare('5.6.0', \PHP_VERSION_ID, 'gt')) {
+    calss_alias(PHPUnit\Framework\TestCase, PHPUnit_Framework_TestCase);
+}
 
-//class StackTest extends TestCase
 class StackTest extends PHPUnit_Framework_TestCase
 {
     public function testStatic () {
