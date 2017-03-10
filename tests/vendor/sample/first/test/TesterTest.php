@@ -31,7 +31,7 @@ class Multiton {
     public static function getInstance()
     {
         if (!isset(static::$instance[static::class])) {
-            if (is_null(static::$instance[static::class])) {
+            if (is_null(static::$instance)) {
                 static::$instance = array();
             }
             static::$instance[static::class] = new static();
