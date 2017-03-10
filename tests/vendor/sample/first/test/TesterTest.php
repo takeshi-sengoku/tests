@@ -23,14 +23,20 @@ class StackTest extends TestCase
 }
 
 class Multiton {
-    protected static $instance = [];
+    static $instance = null;
 
     private final function __construct()
     {}
 
     public static function getInstance()
     {
-        return static::$instance[static::class] ?? static::$instance[static::class] = new static();
+        if (!isset(static::$instance[static::class])) {
+            if (is_null(static::$instance[static::class])) {
+                static::$instance = array();
+            }
+            static::$instance[static::class] = new static();
+        }
+        return static::$instance[static::class];
     }
 }
 
