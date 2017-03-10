@@ -1,6 +1,6 @@
 <?php
 
-if (version_compare('5.6.0', \PHP_VERSION_ID, 'gt')) {
+if (version_compare('5.6.0', \PHP_VERSION_ID, 'lt')) {
     calss_alias(PHPUnit\Framework\TestCase, 'PHPUnit_Framework_TestCase');
 }
 
